@@ -1,0 +1,16 @@
+1. Express is build on top HTTP module, through .listen() port binding happens and 
+through const app = express() an HTML instance server is created...
+2.Server registers itself with Nodejs event loop,it handles incoming requests then,
+as Nodejs is event driven...
+3.When an HTTP server is hit with the request, it parses it and then passes it to
+the express app, as app is just a request handler...
+
+app.listen(3000, () => {
+    console.log('Server running on http://localhost:3000');
+});
+
+// const app = require('express');
+// Equivalent to:
+// const http = require('http');
+// const server = http.createServer(app);
+// server.listen(3000);
